@@ -1,7 +1,11 @@
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 // light slider
 $(document).ready(function () {
     $("#adaptive").lightSlider({
-        adaptiveHeight: true,
+        // autoWidth: true,
         auto: true,
         item: 1,
         pauseOnHover: true,

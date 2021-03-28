@@ -97,6 +97,7 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    transition: .4s;
 
     .hamburger {
         width: 30px;
@@ -143,9 +144,25 @@ a {
 
 
 .main {
-    padding: 50px 50px 100px 24%;
+    padding: 25px 25px 50px 22%;
     background-color: #f2f2f2;
     min-height: 100vh;
+    transition: .4s;
+
+    .mainContainer {
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 20px;
+
+        h2 {
+            font-size: 2rem;
+            color: #999;
+            font-weight: 700;
+        }
+    }
 
     h2 {
         font-size: 2rem;
@@ -153,6 +170,13 @@ a {
         font-weight: 700;
     }
 }
+
+
+// .item-a {
+//     // display: flex;
+//     width: 100%;
+// }
+
 
 .slider {
     width: 100%;
@@ -193,6 +217,7 @@ a {
 .info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .perInfo {
         width: 270px;
@@ -269,8 +294,82 @@ a {
 
 
 
+@media (max-width: 1200px) {
+    .aside {
+        width: 50px;
+        transition: .4s;
+
+        .profil {
+
+            h5 {
+                transition: .1s;
+                transform: scale(0);
+            }
+        }
+
+        .fitur {
+
+            .perFitur {
+
+                p {
+                    transform: scale(0);
+                }
+            }
+        }
+    }
 
 
+    .header {
+        padding: 0 50px 0 100px;
+    }
+
+    .main {
+        padding: 50px 50px 100px 100px;
+    }
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .info {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .perInfo {
+            margin: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .aside {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        z-index: 999999999999999 !important;
+
+        .profil {
+
+            h5 {
+                transition: .1s;
+                transform: scale(1);
+            }
+        }
+
+        .fitur {
+
+            .perFitur {
+
+                p {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -293,7 +392,8 @@ a {
     .profil {
 
         h5 {
-            display: none;
+            transition: .1s;
+            transform: scale(0);
         }
     }
 
@@ -307,3 +407,15 @@ a {
         }
     }
 }
+
+.headerTutup {
+    padding: 0 50px 0 100px;
+}
+
+.mainTutup {
+    padding: 50px 50px 100px 100px;
+}
+
+// .sliderTutup {
+//     width: 150%;
+// }

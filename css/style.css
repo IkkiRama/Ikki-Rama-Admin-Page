@@ -100,6 +100,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .header .hamburger {
@@ -152,9 +154,26 @@ a {
 }
 
 .main {
-  padding: 50px 50px 100px 24%;
+  padding: 25px 25px 50px 22%;
   background-color: #f2f2f2;
   min-height: 100vh;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.main .mainContainer {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+
+.main .mainContainer h2 {
+  font-size: 2rem;
+  color: #999;
+  font-weight: 700;
 }
 
 .main h2 {
@@ -199,6 +218,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .info .perInfo {
@@ -264,6 +286,63 @@ a {
   height: 500px;
 }
 
+@media (max-width: 1200px) {
+  .aside {
+    width: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .aside .profil h5 {
+    -webkit-transition: .1s;
+    transition: .1s;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .aside .fitur .perFitur p {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header {
+    padding: 0 50px 0 100px;
+  }
+  .main {
+    padding: 50px 50px 100px 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .info .perInfo {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 999999999999999 !important;
+  }
+  .aside .profil h5 {
+    -webkit-transition: .1s;
+    transition: .1s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .aside .fitur .perFitur p {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .tutup {
   width: 50px;
   -webkit-transition: .4s;
@@ -271,10 +350,21 @@ a {
 }
 
 .tutup .profil h5 {
-  display: none;
+  -webkit-transition: .1s;
+  transition: .1s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .tutup .fitur .perFitur p {
   display: none;
+}
+
+.headerTutup {
+  padding: 0 50px 0 100px;
+}
+
+.mainTutup {
+  padding: 50px 50px 100px 100px;
 }
 /*# sourceMappingURL=style.css.map */
