@@ -30,6 +30,7 @@ a {
   color: #fff;
   -webkit-transition: .4s;
   transition: .4s;
+  z-index: 999999999999999999999999999999999999999999999 !important;
 }
 
 .aside .profil {
@@ -73,6 +74,8 @@ a {
   font-size: 1.1rem;
   color: #999;
   margin: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .aside .fitur .perFitur:hover {
@@ -103,6 +106,10 @@ a {
   background-color: #fff;
   -webkit-transition: .4s;
   transition: .4s;
+  position: fixed;
+  z-index: 99999;
+  -webkit-box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header .hamburger {
@@ -155,7 +162,7 @@ a {
 }
 
 .main {
-  padding: 25px 25px 50px 22%;
+  padding: 80px 25px 50px 22%;
   background-color: #f2f2f2;
   min-height: 100vh;
   -webkit-transition: .4s;
@@ -274,6 +281,83 @@ a {
   background-color: #fec107;
 }
 
+.card {
+  margin: 50px 0;
+}
+
+.card .header-tabel-setengah-tahun {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .header-tabel-setengah-tahun h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.card .header-tabel-setengah-tahun .card-tools .btn-tool {
+  color: #999;
+}
+
+.card .header-tabel-todo-list {
+  cursor: move;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .header-tabel-todo-list h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.card .header-tabel-todo-list .pagination {
+  margin: 0;
+}
+
+.card .card-body .todo-list li {
+  background: #eeeef0;
+  margin: 3px 0;
+  padding: 10px 15px;
+}
+
+.card .card-body .todo-list li .icheck-primary input {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  height: 20px;
+  width: 30px;
+}
+
+.card .card-body .todo-list li .text {
+  text-decoration: line-through;
+}
+
+.card .card-body .todo-list li .tools {
+  display: none;
+  cursor: pointer;
+}
+
+.card .card-body .todo-list li .tools .fa-trash {
+  color: #dc3545;
+}
+
+.card .card-body .todo-list li:hover .tools {
+  display: inherit;
+}
+
 .foto-produk {
   width: 80px;
 }
@@ -350,15 +434,25 @@ a {
   transition: .4s;
 }
 
+.tutup .profil img {
+  width: 30px;
+  height: 20px;
+  margin: 0;
+  border-radius: 25%;
+}
+
 .tutup .profil h5 {
   -webkit-transition: .1s;
   transition: .1s;
   -webkit-transform: scale(0);
           transform: scale(0);
+  display: none;
 }
 
 .tutup .fitur .perFitur p {
   display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .headerTutup {

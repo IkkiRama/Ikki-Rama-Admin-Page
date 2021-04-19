@@ -32,6 +32,7 @@ a {
     box-shadow: 2px 2px 30px rgba(0, 0, 0.1, 0.3);
     color: #fff;
     transition: .4s;
+    z-index: 999999999999999999999999999999999999999999999 !important;
 
 
     .profil {
@@ -71,6 +72,7 @@ a {
                 font-size: 1.1rem;
                 color: #999;
                 margin: 0;
+                transition: .5s;
             }
 
 
@@ -99,6 +101,9 @@ a {
     align-items: center;
     background-color: #fff;
     transition: .4s;
+    position: fixed;
+    z-index: 99999;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0.3, 0.2);
 
     .hamburger {
         width: 30px;
@@ -145,7 +150,7 @@ a {
 
 
 .main {
-    padding: 25px 25px 50px 22%;
+    padding: 80px 25px 50px 22%;
     background-color: #f2f2f2;
     min-height: 100vh;
     transition: .4s;
@@ -274,6 +279,116 @@ a {
 
 
 
+// tabel
+.card {
+    margin: 50px 0;
+
+    .header-tabel-setengah-tahun {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .card-tools {
+
+            .btn-tool {
+                color: #999;
+            }
+        }
+
+    }
+
+
+    .header-tabel-todo-list {
+        cursor: move;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .pagination {
+            margin: 0;
+        }
+    }
+
+
+    .card-body {
+
+        .todo-list {
+
+            li {
+                background: #eeeef0;
+                margin: 3px 0;
+                padding: 10px 15px;
+
+
+                .icheck-primary {
+
+                    input {
+                        transform: translateY(5px);
+                        height: 20px;
+                        width: 30px;
+                    }
+                }
+
+                .text {
+                    text-decoration: line-through;
+                }
+
+                .tools {
+                    display: none;
+                    cursor: pointer;
+
+                    .fa-trash {
+                        color: #dc3545;
+                    }
+                }
+
+
+                &:hover .tools {
+                    display: inherit;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // produk
 .foto-produk {
@@ -392,9 +507,17 @@ a {
 
     .profil {
 
+        img {
+            width: 30px;
+            height: 20px;
+            margin: 0;
+            border-radius: 25%;
+        }
+
         h5 {
             transition: .1s;
             transform: scale(0);
+            display: none;
         }
     }
 
@@ -404,6 +527,7 @@ a {
 
             p {
                 display: none;
+                transform: scale(0);
             }
         }
     }
